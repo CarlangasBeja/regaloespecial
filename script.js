@@ -141,7 +141,7 @@ document.querySelector('.overlay').addEventListener('click',()=>{
         // Fuegos artificiales
         crearFuegosArtificiales();
     } else{
-        mensajeDiv.textContent="💖 Vengan a mí todos ustedes, los agotados de tanto trabajar, que yo los haré descansar. Lleven mi yugo sobre ustedes, y aprendan de mí, que soy manso y humilde de corazón, y hallarán descanso para su alma; porque mi yugo es fácil, y mi carga es liviana.💖 Mateo 11:28-30 💖";
+        mensajeDiv.textContent="💖Siempre seré tu refugio y tu fuerza, te amaré sin condiciones, hoy, mañana y siempre.💖";
         document.querySelector('.overlay').style.pointerEvents="none";
     }
 });
