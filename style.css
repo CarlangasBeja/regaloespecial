@@ -1,0 +1,149 @@
+/* Fondo fijo */
+.fondo-img {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: url('fondo.jpg') center/cover no-repeat;
+  background-size: cover;
+  z-index:0;
+}
+
+/* Canvas */
+#container {
+  position:absolute; top:0; left:0;
+  width:100%; height:100%;
+  z-index:1;
+}
+
+/* Overlay */
+.overlay {
+  position:absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+  text-align:center;
+  cursor:pointer;
+}
+
+/* Corazón más grande */
+.corazon-img {
+  width:120px; height:120px;
+  border-radius:50%;
+  animation:pulse 2s infinite;
+  box-shadow:0 0 50px rgba(255,0,100,0.9),0 0 120px rgba(255,20,147,0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Mensaje de frases más grande y más abajo */
+.mensaje {
+  margin-top: 90px;       /* antes 20px → más abajo */
+  font-size: 50px;        /* antes 28px → más grande */
+  color: #ff66cc;
+  text-shadow: 0 0 10px #ff00ff, 0 0 30px #ff0099;
+  text-align: center;
+}
+
+/* Frase encima del corazón */
+.saludo {
+  font-size: 28px;
+  color: #000000;  /* antes #ff99cc → ahora negro */
+  text-shadow: 0 0 5px #555555; /* opcional, para que se vea sobre el fondo */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .saludo { font-size: 1.2rem; margin-bottom: 10px; }
+}
+
+
+
+/* -------------------- INDEX Y PREGUNTA -------------------- */
+h1 {
+  text-align:center;
+  color:white;
+  text-shadow:0 0 15px #ff00ff;
+}
+
+.index-body, .pregunta-body {
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  justify-content:center; 
+  height:100vh;
+}
+.index-body { background:linear-gradient(135deg,#000,#1a0026); }
+.pregunta-body { background:linear-gradient(135deg,#2a004f,#000); }
+
+/* Fondo fijo */
+.index-fondo {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: url('indexfondo.jpg') center/cover no-repeat;
+  background-size: cover;
+  z-index:0;
+}
+
+/* Contenedor principal con elementos sobre el fondo */
+.index-body {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  position: relative;   /* necesario para z-index */
+  z-index:1;            /* sobre el fondo */
+}
+
+/* Título centrado */
+.index-body h1 {
+  text-align:center;
+  color:white;
+  text-shadow:0 0 15px #ff00ff;
+  margin-bottom:30px;
+  z-index:2; /* opcional, para asegurar */
+  position: relative;
+}
+
+/* Botón regalo */
+.gift-btn {
+  background: url('presente.png') center/cover no-repeat;
+  width:150px;
+  height:150px;
+  border:none;
+  cursor:pointer;
+  transition: transform 0.2s, filter 0.3s;
+  filter: drop-shadow(0 0 20px #ff00ff);
+  z-index:2;
+  position: relative;
+}
+
+.gift-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 40px #ff80ff);
+}
+
+
+
+
+/* SELECT, INPUT, BOTONES */
+select,input,button {
+  margin:10px;
+  padding:10px;
+  font-size:1.1em;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+button {
+  background:#ff00cc;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover {
+  background:#ff66ff;
+  box-shadow:0 0 20px #ff00cc;
+}
